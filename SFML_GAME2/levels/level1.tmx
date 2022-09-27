@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="48" height="27" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="dirt1" tilewidth="128" tileheight="128" tilecount="16" columns="16">
+  <image source="../sprites/dirt1.png" width="2048" height="128"/>
+ </tileset>
+ <tileset firstgid="17" name="ArrowSign" tilewidth="86" tileheight="87" tilecount="1" columns="1">
+  <image source="../sprites/Objects/ArrowSign.png" width="86" height="87"/>
+ </tileset>
+ <tileset firstgid="18" name="Bush (1)" tilewidth="182" tileheight="90" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Bush (1).png" width="182" height="90"/>
+ </tileset>
+ <tileset firstgid="19" name="Crate" tilewidth="106" tileheight="106" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Crate.png" width="106" height="106"/>
+ </tileset>
+ <tileset firstgid="20" name="Sign" tilewidth="91" tileheight="93" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Sign.png" width="91" height="93"/>
+ </tileset>
+ <tileset firstgid="21" name="Skeleton" tilewidth="102" tileheight="50" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Skeleton.png" width="102" height="50"/>
+ </tileset>
+ <tileset firstgid="22" name="TombStone (1)" tilewidth="54" tileheight="55" tilecount="1" columns="1">
+  <image source="../sprites/Objects/TombStone (1).png" width="54" height="55"/>
+ </tileset>
+ <tileset firstgid="23" name="TombStone (2)" tilewidth="53" tileheight="76" tilecount="1" columns="1">
+  <image source="../sprites/Objects/TombStone (2).png" width="53" height="76"/>
+ </tileset>
+ <tileset firstgid="24" name="Tree" tilewidth="286" tileheight="239" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Tree.png" width="286" height="239"/>
+ </tileset>
+ <tileset firstgid="25" name="DeadBush" tilewidth="132" tileheight="74" tilecount="1" columns="1">
+  <image source="../sprites/Objects/DeadBush.png" width="132" height="74"/>
+ </tileset>
+ <tileset firstgid="26" name="Bone (2)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/Tiles/Bone (2).png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="27" name="Bone (3)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/Tiles/Bone (3).png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="28" name="Bone (4)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/Tiles/Bone (4).png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="29" name="Bone (1)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/Tiles/Bone (1).png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="30" name="Bush (2)" tilewidth="100" tileheight="64" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Bush (2).png" width="100" height="64"/>
+ </tileset>
+ <tileset firstgid="31" name="water (1)" tilewidth="128" tileheight="99" tilecount="1" columns="1">
+  <image source="../sprites/png/Tiles/17.png" width="128" height="99"/>
+ </tileset>
+ <tileset firstgid="32" name="water (2)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/png/Tiles/18.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="33" name="coin" tilewidth="119" tileheight="129" tilecount="1" columns="1">
+  <image source="../menu/windows/Windows_32.png" width="119" height="129"/>
+ </tileset>
+ <tileset firstgid="34" name="health" tilewidth="115" tileheight="115" tilecount="1" columns="1">
+  <image source="../menu/windows/Windows_21.png" width="115" height="115"/>
+ </tileset>
+ <tileset firstgid="35" name="shield" tilewidth="98" tileheight="115" tilecount="1" columns="1">
+  <image source="../menu/windows/Windows_22.png" width="98" height="115"/>
+ </tileset>
+ <tileset firstgid="36" name="atack_ability" tilewidth="115" tileheight="127" tilecount="1" columns="1">
+  <image source="../menu/windows/Windows_23.png" width="115" height="127"/>
+ </tileset>
+ <tileset firstgid="37" name="diamond" tilewidth="122" tileheight="114" tilecount="1" columns="1">
+  <image source="../menu/windows/Windows_33.png" width="122" height="114"/>
+ </tileset>
+ <tileset firstgid="38" name="Spike" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Spike.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="39" name="DoorLocked" tilewidth="154" tileheight="256" tilecount="1" columns="1">
+  <image source="../sprites/Objects/DoorLocked.png" width="154" height="256"/>
+ </tileset>
+ <tileset firstgid="40" name="Switch (2)" tilewidth="54" tileheight="192" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Switch (2).png" width="54" height="192"/>
+ </tileset>
+ <tileset firstgid="41" name="DoorUnlocked" tilewidth="155" tileheight="256" tilecount="1" columns="1">
+  <image source="../sprites/Objects/DoorUnlocked.png" width="155" height="256"/>
+ </tileset>
+ <tileset firstgid="42" name="DoorOpen" tilewidth="154" tileheight="256" tilecount="1" columns="1">
+  <image source="../sprites/Objects/DoorOpen.png" width="154" height="256"/>
+ </tileset>
+ <tileset firstgid="43" name="Switch (1)" tilewidth="54" tileheight="192" tilecount="1" columns="1">
+  <image source="../sprites/Objects/Switch (1).png" width="54" height="192"/>
+ </tileset>
+ <tileset firstgid="44" name="chest" tilewidth="120" tileheight="75" tilecount="1" columns="1">
+  <image source="../sprites/Objects/chest.png" width="120" height="75"/>
+ </tileset>
+ <layer id="1" name="dirt" width="48" height="27">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1,2,3,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,2,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,2,2,2,3,14,16,0,0,12,5,6,0,0,0,0,0,0,1,2,2,7,8,9,9,9,9,9,9,9,10,11,2,2,2,2,2,3,0,1,2,2,3,0,0,0,
+0,0,12,9,9,9,13,0,0,0,0,0,12,13,0,0,1,2,2,7,8,9,9,9,9,0,0,0,0,0,0,0,9,9,9,9,9,9,9,13,0,12,9,5,6,0,1,3,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,5,5,9,0,0,0,0,0,1,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,6,0,12,13,
+1,2,2,2,2,2,2,3,0,0,0,0,0,0,0,0,12,9,9,13,0,0,0,0,0,0,4,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,6,0,0,0,
+4,5,9,9,9,9,9,13,0,0,0,1,2,2,3,0,0,0,0,0,0,0,14,15,15,15,4,5,6,0,0,0,0,0,0,0,0,0,0,1,2,3,0,4,6,0,0,0,
+4,6,0,0,0,0,0,0,0,0,0,12,9,9,13,0,0,0,0,0,0,0,0,0,0,0,4,5,6,0,0,0,0,0,0,0,0,0,0,12,9,13,0,4,6,0,0,3,
+4,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,6,0,0,0,1,2,2,2,3,0,0,0,0,0,0,4,10,2,0,6,
+4,10,11,2,2,0,0,0,0,2,2,2,2,2,2,2,2,2,2,3,0,1,2,2,2,7,8,5,10,11,2,7,8,9,9,9,6,0,0,0,0,0,1,8,5,5,0,6,
+4,5,5,5,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,13,0,12,9,9,9,9,9,9,9,9,9,9,0,0,0,0,10,11,2,3,0,1,8,9,9,9,0,13,
+12,9,9,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,9,9,9,0,12,9,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,0,0,0,4,6,0,1,2,2,2,2,3,14,15,15,15,16,0,0,
+0,0,0,1,3,0,0,4,5,6,0,0,0,0,0,0,0,0,4,6,0,0,12,9,9,9,9,9,13,0,0,0,4,6,0,12,9,9,9,5,6,0,0,0,0,0,0,0,
+1,2,2,8,6,0,0,12,9,13,0,0,0,0,0,0,0,0,4,6,0,0,0,0,0,0,0,0,0,0,0,14,4,6,0,0,0,0,0,4,6,0,0,0,0,0,0,0,
+12,9,9,5,6,0,0,0,0,0,0,14,15,15,15,15,16,0,4,6,0,0,1,2,2,2,2,3,0,0,0,0,4,6,0,0,0,0,0,4,6,0,0,0,1,2,2,3,
+0,0,0,4,6,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,2,2,8,5,5,5,5,6,0,0,0,0,4,0,0,0,0,0,0,4,6,0,0,0,12,9,9,13,
+0,0,14,4,6,0,0,0,1,3,0,0,0,0,0,0,1,7,8,9,9,9,9,9,9,9,5,6,15,16,0,0,4,0,0,0,14,15,16,4,6,0,0,0,0,0,0,0,
+0,0,0,4,10,11,2,2,8,10,2,2,2,2,3,0,4,6,0,0,0,0,0,0,0,0,4,6,0,0,0,0,4,0,0,0,0,0,0,4,6,16,0,0,0,0,0,0,
+16,0,0,12,9,9,9,9,9,9,9,9,9,9,13,0,4,6,0,14,15,15,15,1,3,0,4,6,0,0,0,0,4,6,0,1,2,2,2,8,6,0,0,0,15,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,6,0,0,0,0,0,4,6,0,12,13,14,15,15,16,12,13,0,12,9,9,9,9,13,0,0,0,0,0,0,0,
+16,0,0,0,14,16,0,0,0,0,0,0,14,16,0,1,8,10,11,2,2,3,0,4,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,19,
+19,0,0,0,0,0,0,1,3,0,0,0,0,0,0,12,9,9,9,9,9,13,0,4,6,0,0,0,0,0,0,0,0,0,0,14,15,15,15,16,0,0,4,6,0,0,0,19,
+1,2,3,0,0,0,0,4,10,11,2,3,0,0,0,0,0,0,0,0,0,0,0,4,6,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,4,6,0,0,0,19,
+4,5,10,2,2,2,7,8,5,5,5,10,11,2,2,2,2,2,2,2,2,3,0,4,10,2,2,2,2,2,2,8,10,11,2,2,2,2,2,2,2,2,8,10,2,2,2,3,
+12,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,13
+</data>
+ </layer>
+ <layer id="2" name="object" width="48" height="27">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,17,35,36,0,0,0,0,0,0,0,0,0,0,0,21,36,33,22,17,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,33,0,36,19,19,0,22,0,0,0,0,0,0,0,0,0,0,0,0,17,22,24,33,0,0,0,0,0,0,0,0,0,0,33,19,0,22,30,17,0,25,25,25,25,0,0,0,
+0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,22,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,25,
+0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,22,21,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,
+0,0,0,0,0,0,0,0,0,33,0,19,24,22,30,0,0,0,0,0,0,0,0,35,38,0,0,0,0,33,0,0,19,0,0,0,33,33,0,36,20,34,0,0,0,33,0,0,
+0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,33,33,0,0,0,0,0,0,0,0,0,39,
+0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,24,0,18,22,0,0,0,0,0,0,0,0,38,0,0,
+0,0,34,40,30,0,0,0,0,0,21,0,22,0,0,19,0,22,24,0,33,0,0,22,18,34,0,0,0,31,31,31,0,0,0,0,0,0,0,0,0,0,40,0,0,0,37,0,
+0,0,0,0,0,31,31,31,31,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,37,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,30,0,22,0,19,24,0,0,19,0,34,0,0,0,22,18,24,0,19,0,22,33,0,0,0,0,0,30,34,22,0,18,0,0,0,24,0,0,0,0,
+0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,37,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,
+23,17,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,33,0,35,0,0,33,0,0,0,0,0,0,0,0,0,0,35,0,0,
+0,0,0,0,0,0,0,0,0,0,0,36,0,22,34,19,0,0,0,0,33,0,0,21,34,17,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,18,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,35,0,0,0,0,0,33,33,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,35,0,19,0,0,0,0,0,33,33,0,0,0,0,
+0,0,0,0,0,38,38,38,0,0,0,21,22,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,33,33,0,0,0,0,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,22,0,19,0,0,0,0,0,0,0,0,0,0,0,22,34,0,0,0,0,33,33,19,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,33,0,0,0,40,38,38,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,
+36,0,0,0,0,19,0,0,0,0,0,0,19,0,0,33,0,0,0,21,22,0,0,0,0,37,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,21,0,0,0,0,0,
+0,0,0,0,0,0,0,33,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,30,19,0,21,0,0,0,0,0,0,35,19,
+19,22,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0,36,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,
+0,0,0,18,0,19,34,0,0,0,0,0,24,0,17,30,0,25,25,25,0,34,0,0,0,0,21,24,0,22,30,0,0,0,40,0,25,25,25,0,18,0,0,0,22,0,40,19,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
