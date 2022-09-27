@@ -7,7 +7,7 @@
 #define windowWidth 1920
 #define windowHeight 1080
 
-enum menuState {Main , Levels , Exit , Start , Pause , GameOver , WinLevel , Shop };
+enum menuState {Main , Levels , Controls , Exit , Start , Pause , GameOver , WinLevel , Shop };
 
 class Menu
 {

@@ -76,7 +76,7 @@ void Menu::renderMenu(sf::RenderTarget* target  , sf::Vector2f viewPos, int& coi
 		target->draw(*this->text);
 
 		//start button
-		this->buttonPos = { (windowWidth - 363) / 2 - 363 , 519 + 50 + 100 };
+		this->buttonPos = { (windowWidth - 363) / 2 - 363 - 363/2 , 519 + 50 + 100 };
 		if (sf::Mouse::getPosition(*(sf::RenderWindow*)target).x >= this->buttonPos.x && sf::Mouse::getPosition(*(sf::RenderWindow*)target).x <= this->buttonPos.x + 363
 			&& sf::Mouse::getPosition(*(sf::RenderWindow*)target).y >= this->buttonPos.y && sf::Mouse::getPosition(*(sf::RenderWindow*)target).y <= this->buttonPos.y + 178)//hover
 		{
@@ -98,13 +98,13 @@ void Menu::renderMenu(sf::RenderTarget* target  , sf::Vector2f viewPos, int& coi
 		target->draw(*this->windowSprite);
 
 		this->text->setString("START");
-		this->text->setPosition({ windowWidth / 2 - 100 - 353, 519 + 70 + 100 });
+		this->text->setPosition({ windowWidth / 2 - 100 - 353 - 363/2, 519 + 70 + 100 });
 		this->text->setCharacterSize(100);
 		target->draw(*this->text);
 
 		//levels 
 
-		this->buttonPos = { (windowWidth - 363) / 2 , 519 + 50 + 100 } ;
+		this->buttonPos = { (windowWidth - 363) / 2 - 363/2 , 519 + 50 + 100 } ;
 		if (sf::Mouse::getPosition(*(sf::RenderWindow*)target).x >= this->buttonPos.x && sf::Mouse::getPosition(*(sf::RenderWindow*)target).x <= this->buttonPos.x + 363
 			&& sf::Mouse::getPosition(*(sf::RenderWindow*)target).y >= this->buttonPos.y && sf::Mouse::getPosition(*(sf::RenderWindow*)target).y <= this->buttonPos.y + 178)//hover
 		{
@@ -126,13 +126,41 @@ void Menu::renderMenu(sf::RenderTarget* target  , sf::Vector2f viewPos, int& coi
 		target->draw(*this->windowSprite);
 
 		this->text->setString("LEVELS");
-		this->text->setPosition({ windowWidth / 2 - 120 , 519 + 70 + 100 });
+		this->text->setPosition({ windowWidth / 2 - 120 - 363/2 , 519 + 70 + 100 });
 		this->text->setCharacterSize(100);
+		target->draw(*this->text);
+
+		//controls
+
+		this->buttonPos = { (windowWidth - 363) / 2 + 363/2, 519 + 50 + 100  };
+		if (sf::Mouse::getPosition(*(sf::RenderWindow*)target).x >= this->buttonPos.x && sf::Mouse::getPosition(*(sf::RenderWindow*)target).x <= this->buttonPos.x + 363
+			&& sf::Mouse::getPosition(*(sf::RenderWindow*)target).y >= this->buttonPos.y && sf::Mouse::getPosition(*(sf::RenderWindow*)target).y <= this->buttonPos.y + 178)//hover
+		{
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+			{
+				this->menuSelector = Controls;
+				this->windowSprite->setTextureRect({ 363 , 178 , 363 , 178 });
+			}
+			else
+			{
+				this->windowSprite->setTextureRect({ 0 , 178 , 363 , 178 });
+			}
+		}
+		else
+		{
+			this->windowSprite->setTextureRect({ 1239 , 0 , 363 , 178 });
+		}
+		this->windowSprite->setPosition(this->buttonPos);
+		target->draw(*this->windowSprite);
+
+		this->text->setString("Controls");
+		this->text->setPosition({ windowWidth / 2 - 140 + 363/2 , 519 + 70 + 110 });
+		this->text->setCharacterSize(85);
 		target->draw(*this->text);
 
 		//exit
 		
-		this->buttonPos = { (windowWidth - 363)/2  + 363, 519 + 50 + 100 } ;
+		this->buttonPos = { (windowWidth - 363)/2  + 363 + 362/2, 519 + 50 + 100 } ;
 		if (sf::Mouse::getPosition(*(sf::RenderWindow*)target).x >= this->buttonPos.x && sf::Mouse::getPosition(*(sf::RenderWindow*)target).x <= this->buttonPos.x + 363
 			&& sf::Mouse::getPosition(*(sf::RenderWindow*)target).y >= this->buttonPos.y && sf::Mouse::getPosition(*(sf::RenderWindow*)target).y <= this->buttonPos.y + 178)//hover
 		{
@@ -154,7 +182,7 @@ void Menu::renderMenu(sf::RenderTarget* target  , sf::Vector2f viewPos, int& coi
 		target->draw(*this->windowSprite);
 
 		this->text->setString("EXIT");
-		this->text->setPosition({ windowWidth / 2 - 80 + 363 , 519 + 70  + 100 });
+		this->text->setPosition({ windowWidth / 2 - 80 + 363 + 363/2 , 519 + 70  + 100 });
 		this->text->setCharacterSize(100);
 		target->draw(*this->text);
 		
@@ -645,7 +673,60 @@ void Menu::renderMenu(sf::RenderTarget* target  , sf::Vector2f viewPos, int& coi
 			target->draw(*this->windowSprite);
 
 			break;
+		case Controls:
+			target->draw(*bgSprite);
 
+			this->windowSprite->setTextureRect({ 0 , 957 , 1045 , 716 });
+			this->windowSprite->setPosition({ viewPos.x - 1045 / 2 , 100 });
+			target->draw(*this->windowSprite);
+			//
+			mousePos.x = sf::Mouse::getPosition(*(sf::RenderWindow*)target).x;
+			mousePos.y = sf::Mouse::getPosition(*(sf::RenderWindow*)target).y;
+
+			//title
+			this->windowSprite->setTextureRect({ 0 , 0 , 525 , 107 });
+			this->windowSprite->setPosition(viewPos.x - 525 / 2, 50);
+			target->draw(*this->windowSprite);
+
+			this->text->setCharacterSize(55);
+			this->text->setString("Controls");
+			this->text->setPosition(viewPos.x - 525 / 2 + 170, 55);
+			target->draw(*this->text);
+
+			this->text->setCharacterSize(55);
+			this->text->setString(" A / D - walk \n A / D + LEFT SHIFT - RUN \n SPACE - JUMP \n Space + LEFT SHIFT - SUPER JUMP \n J - ATTACK \n R - RESPAWN PLAYER \n T - RESPAWN PLAYER & BOXES \n ");
+			this->text->setPosition(viewPos.x - 525 / 2 - 50 , 155);
+			target->draw(*this->text);
+
+			this->text->setCharacterSize(35);
+			this->text->setString("Note: Shields = DEADBUSH can't kill you & zombies get freeze !\n ");
+			this->text->setPosition(viewPos.x - 525 / 2 - 170, 630);
+			target->draw(*this->text);
+
+			//home
+			this->buttonPos = { viewPos.x - 176/2, viewPos.y };
+
+			if (mousePos.x >= this->buttonPos.x && mousePos.x <= this->buttonPos.x + 176
+				&& mousePos.y >= this->buttonPos.y && mousePos.y <= this->buttonPos.y + 178)//hover
+			{
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+				{
+					this->menuSelector = Main;
+					this->windowSprite->setTextureRect({ 353 , 356 , 176 , 178 });
+				}
+				else
+				{
+					this->windowSprite->setTextureRect({ 176 , 356 , 176 , 178 });
+				}
+			}
+			else
+			{
+				this->windowSprite->setTextureRect({ 0 , 356 , 176 , 178 });
+			}
+			this->windowSprite->setPosition(this->buttonPos);
+			target->draw(*this->windowSprite);
+
+			break;
 		case Levels:
 
 			target->draw(*bgSprite);

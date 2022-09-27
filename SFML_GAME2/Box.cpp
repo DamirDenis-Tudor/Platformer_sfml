@@ -160,14 +160,14 @@ void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vec
 	//left right playerColsion v2
 
 	if (playerPos.x + 0.8 >= this->position.x && playerPos.x  <= this->position.x
-		&& playerPos.y - 0.5 <= this->position.y + 0.95 && playerPos.y + 0.5 > this->position.y)
+		&& playerPos.y - 0.47 <= this->position.y + 0.95 && playerPos.y + 0.5 > this->position.y)
 	{
 		this->pushedRight = true;
 		this->pushedLeft = false;
 	}
 
 	if (playerPos.x + 1 >= this->position.x + 1 && playerPos.x <= this->position.x + 1
-		&& ( playerPos.y - 0.4 <= this->position.y + 1 && playerPos.y + 0.5 > this->position.y ) )
+		&& ( playerPos.y - 0.47 <= this->position.y + 1 && playerPos.y + 0.5 > this->position.y ) )
 	{
 		this->pushedRight = false;
 		this->pushedLeft = true;

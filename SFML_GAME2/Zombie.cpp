@@ -212,7 +212,8 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 	//waiting
 	if (!this->deadStatus)
 	{
-		if (((playerPosition.y - 0.4 <= this->position.y + 1 && playerPosition.y + 0.4 >= this->position.y) && (this->leftCollision || this->rightCollision || this->leftBoxCollision || this->rightBoxCollision)) && !this->deadStatus)
+		if (((playerPosition.y - 0.4 <= this->position.y + 1 && playerPosition.y + 0.4 >= this->position.y) && (this->leftCollision || this->rightCollision || this->leftBoxCollision || this->rightBoxCollision)) 
+			&& !this->deadStatus && ((playerPosition.x < this->position.x && !this->rightCollision) || (playerPosition.x > this->position.x && !this->leftCollision)) )
 		{
 			this->waiting = true;
 		}

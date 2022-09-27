@@ -950,9 +950,9 @@ void Game::render()
 		this->renderTabInfo();
 		this->renderView();
 	}
-	if(this->menu->menuSelector == Pause || this->menu->menuSelector == GameOver || this->menu->menuSelector == Main || this->menu->menuSelector == Levels || this->menu->menuSelector == WinLevel || this->menu->menuSelector == Shop)
+	if(this->menu->menuSelector == Pause || this->menu->menuSelector == GameOver || this->menu->menuSelector == Main || this->menu->menuSelector == Levels || this->menu->menuSelector == WinLevel || this->menu->menuSelector == Shop || this->menu->menuSelector==Controls)
 	{
-		if (this->menu->menuSelector == Main || this->menu->menuSelector == Levels)
+		if (this->menu->menuSelector == Main || this->menu->menuSelector == Levels || this->menu->menuSelector == Controls)
 		{
 			this->renderMenuView();
 		}

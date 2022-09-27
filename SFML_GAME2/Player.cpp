@@ -500,9 +500,6 @@ void Player::updateMovement(int **&map , float deltaTime)
 
 		/*
 			coliision
-			-> made with an error on 0.1
-			-> player has 45 width , collision mecanism take it like 60 -> we need to move with 15 pixels right
-			->>play with that values
 		*/
 		this->leftCollision = false;
 		this->rightCollision = false;
@@ -533,7 +530,7 @@ void Player::updateMovement(int **&map , float deltaTime)
 		}
 		if (this->velocity.y >= 0)
 		{
-			if (map[(int)(newPosition.y + 1.01) ][(int)(newPosition.x + 0.3)] != 0 || map[(int)(newPosition.y +1.01) ][(int)(newPosition.x + 0.7)] != 0 || ( int(newPosition.y) == mapHeight-2 ) || this->topBoxColision )//bottom
+			if (map[(int)(newPosition.y + 1.01) ][(int)(newPosition.x + 0.35)] != 0 || map[(int)(newPosition.y +1.01) ][(int)(newPosition.x + 0.65)] != 0 || ( int(newPosition.y) == mapHeight-2 ) || this->topBoxColision )//bottom
 			{
 				newPosition.y = this->position.y;
 				this->groundCollision = true;
@@ -548,7 +545,7 @@ void Player::updateMovement(int **&map , float deltaTime)
 		}
 		else if (this->velocity.y < 0)
 		{
-			if ( map[(int)(newPosition.y + 0.1)][(int)(newPosition.x + 0.2)] != 0 || map[(int)(newPosition.y + 0.1)][(int)(newPosition.x + 0.8)] != 0 ||  newPosition.y  <= 0 )//top
+			if ( map[(int)(newPosition.y + 0.1)][(int)(newPosition.x + 0.35)] != 0 || map[(int)(newPosition.y + 0.1)][(int)(newPosition.x + 0.65)] != 0 ||  newPosition.y  <= 0 )//top
 			{
 				newPosition.y = this->position.y;
 				this->velocity.y = 0;
@@ -655,14 +652,11 @@ void Player::updateObjectsCollision(int**& objects)
 
 void Player::renderPlayer(sf::RenderTarget* target )
 {
-	//remder player
 	target->draw(*this->sprite);
 }
 
 void Player::renderPlayerInfo(sf::RenderTarget* target, sf::Vector2f viewPos)
 {
-
-	//remder info
 
 	//health
 	this->infoSprite->setTextureRect({ 0 , 295  , 253 , 60 });
