@@ -7,10 +7,8 @@ int main()
 
 	while (game.isWindow() )
 	{
-		//game update
 		game.update();
-
-		//hame render
+		
 		game.render();
 	}
 
