@@ -20,8 +20,7 @@ void Game::initRenderWindow()
 {
 	this->videoMode.height = windowHeight;
 	this->videoMode.width = windowWidth;
-	this->renderWindow = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "The Boy" , sf::Style::Fullscreen  );
-	//this->renderWindow = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "The Boy");
+	this->renderWindow = new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "The Knight" , sf::Style::Fullscreen  );
 	this->renderWindow->setFramerateLimit(144);
 }
 
@@ -33,14 +32,12 @@ void Game::initFontAndText()
 	this->text = new sf::Text;
 	this->text->setFont(*this->font);
 	this->text->setFillColor({ 153 , 102 ,51 });
-	//this->text->setOutlineColor({ 204, 204, 204 });
 	this->text->setLetterSpacing(1.f);
 	this->text->setOutlineThickness(1.f);
 
 	this->textDisplay = new sf::Text;
 	this->textDisplay->setFont(*this->font);
 	this->textDisplay->setFillColor({ 153 , 102 ,51 });
-	//this->text->setOutlineColor({ 204, 204, 204 });
 	this->textDisplay->setLetterSpacing(1.f);
 	this->textDisplay->setOutlineThickness(1.f);
 
@@ -127,7 +124,7 @@ void Game::initLevel()
 {
 	std::ifstream file("Levels/level1.tmx");
 
-	//get rid of dirt layer info
+	//get rid of info from file that isn't relevant
 	std::string line;
 	int iterator = 1;
 	while (iterator <= 91)
@@ -189,89 +186,6 @@ void Game::initLevel()
 	}
 
 	file.close();
-}
-
-//draw tab
-void Game::renderTabInfo()
-{
-	this->text->setCharacterSize(30);
-	this->text->setString("Zombie killed : ");
-	
-	this->text->setPosition(this->view->getCenter().x - 1920/2 + 20 , this->view->getCenter().y - 350 );
-
-	this->renderWindow->draw(*this->text);
-
-	char zombies[4];
-	if (this->zPositions.size() > 10)
-	{
-		zombies[2] = '\0';
-		zombies[1] = this->deadZombiesCounter % 10 + 48;
-		zombies[0] = this->deadZombiesCounter / 10 + 48;
-	}
-	else
-	{
-		zombies[0] = this->deadZombiesCounter / 10 + 48;
-		zombies[1] = '\0';
-		zombies[2] = '\0';
-	}
-
-	this->text->setString((std::string)zombies);
-
-	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 220, this->view->getCenter().y - 350);
-
-	this->renderWindow->draw(*this->text);
-
-	//char zombies[4];
-	if (this->zPositions.size() > 10)
-	{
-		zombies[3] = '\0';
-		zombies[0] = '/';
-		zombies[2] = this->zPositions.size() % 10 + 48;
-		zombies[1] = this->zPositions.size() / 10 + 48;
-	}
-	else
-	{
-		zombies[0] = this->zPositions.size() / 10 + 48;
-		zombies[1] = '/';
-		zombies[2] = '\0';
-	}
-
-	this->text->setString((std::string)zombies);
-
-	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 250, this->view->getCenter().y - 350);
-
-	this->renderWindow->draw(*this->text);
-
-
-	this->text->setString("Switches opened : ");
-
-	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 20, this->view->getCenter().y - 300);
-
-	this->renderWindow->draw(*this->text);
-
-	char switches[3];
-
-	switches[0] = this->openSwtCounter % 10 + 48;
-	switches[1] = '\0';
-	switches[2] = '\0';
-
-	this->text->setString((std::string)switches);
-
-	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 250, this->view->getCenter().y - 300);
-
-	this->renderWindow->draw(*this->text);
-
-	//char switches[3];
-	
-	switches[1] = this->swtPositions.size() % 10 + 48;
-	switches[0] = '/';
-	switches[2] = '\0';
-
-	this->text->setString((std::string)switches);
-
-	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 270, this->view->getCenter().y - 300);
-
-	this->renderWindow->draw(*this->text);
 }
 
 const bool Game::isWindow()
@@ -523,8 +437,7 @@ void Game::updateBoxes()
 		
 
 
-		//left right
-
+		//box -> boxes interaction
 		for (int k = 0; k < boxes.size(); k++)
 		{
 			this->boxes[k]->checked = false;
@@ -533,7 +446,9 @@ void Game::updateBoxes()
 
 		bool checked = true;
 		this->boxes[i]->checked = true;
-		
+
+		//left - right   -> n^3 complexity
+		//boxes aren't positioned in order -> need rechecking
 		while (checked)
 		{
 			sf::Vector2f refferenceBoxPos = this->boxes[boxCheckIndex]->getPosition();
@@ -608,8 +523,7 @@ void Game::updateBoxes()
 		}
 	}
 
-	std::cout << "\n";
-
+	//actualize statutes with player
 	if (topStatus)
 	{
 		this->player->topBoxColision = true;
@@ -646,8 +560,7 @@ void Game::updateBoxes()
 		this->player->bottomBoxCollision = false;
 	}
 
-
-
+	//actualize zombies statuses
 	for (int i = 0; i < this->zPositions.size(); i++)
 	{
 		if (!this->zombies[i]->getDeadStatus())
@@ -725,6 +638,7 @@ void Game::updateZombies()
 	for (int i = 0; i < this->zombies.size(); i++)
 	{
 		//update and check player collision
+		
 		hit = this->zombies[i]->update(this->level->matrix, this->player->getPos(), this->player->getAttackStatus(), this->player->getGroundStatus(), this->player->getShieldStatus(), this->deltaTime.asSeconds());
 		if (hit)
 		{
@@ -737,6 +651,7 @@ void Game::updateZombies()
 				this->player->deadStatus = hit;
 			}
 		}
+		//zombie attack hasn't effect immediately
 		if (this->zombies[i]->getFreezeStatus() && this->zombies[i]->prevFreezeStatus != this->zombies[i]->getFreezeStatus())
 		{
 			if (this->player->getShieldStatus())
@@ -755,9 +670,11 @@ void Game::updateZombies()
 		//reward spawn
 		if (this->zombies[i]->getDeadStatus() && this->level->objects[(int)this->zombies[i]->getSpawnPosition().y][(int)this->zombies[i]->getSpawnPosition().x] != 0)
 		{
-			//here randomazi reward
+			//here randomaze reward
 			this->level->objects[(int)this->zombies[i]->getSpawnPosition().y][(int)this->zombies[i]->getSpawnPosition().x] = 37;
 		}
+		
+		//conter for dead zombies
 		if (this->zombies[i]->getDeadStatus())
 		{
 			deadZ++;
@@ -773,6 +690,89 @@ void Game::updateZombies()
 			this->deadZombies = false;
 		}
 	}
+}
+
+
+void Game::renderTabInfo()
+{
+	this->text->setCharacterSize(30);
+	this->text->setString("Zombie killed : ");
+	
+	this->text->setPosition(this->view->getCenter().x - 1920/2 + 20 , this->view->getCenter().y - 350 );
+
+	this->renderWindow->draw(*this->text);
+
+	char zombies[4];
+	if (this->zPositions.size() > 10)
+	{
+		zombies[2] = '\0';
+		zombies[1] = this->deadZombiesCounter % 10 + 48;
+		zombies[0] = this->deadZombiesCounter / 10 + 48;
+	}
+	else
+	{
+		zombies[0] = this->deadZombiesCounter / 10 + 48;
+		zombies[1] = '\0';
+		zombies[2] = '\0';
+	}
+
+	this->text->setString((std::string)zombies);
+
+	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 220, this->view->getCenter().y - 350);
+
+	this->renderWindow->draw(*this->text);
+
+	//char zombies[4];
+	if (this->zPositions.size() > 10)
+	{
+		zombies[3] = '\0';
+		zombies[0] = '/';
+		zombies[2] = this->zPositions.size() % 10 + 48;
+		zombies[1] = this->zPositions.size() / 10 + 48;
+	}
+	else
+	{
+		zombies[0] = this->zPositions.size() / 10 + 48;
+		zombies[1] = '/';
+		zombies[2] = '\0';
+	}
+
+	this->text->setString((std::string)zombies);
+
+	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 250, this->view->getCenter().y - 350);
+
+	this->renderWindow->draw(*this->text);
+
+
+	this->text->setString("Switches opened : ");
+
+	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 20, this->view->getCenter().y - 300);
+
+	this->renderWindow->draw(*this->text);
+
+	char switches[3];
+
+	switches[0] = this->openSwtCounter % 10 + 48;
+	switches[1] = '\0';
+	switches[2] = '\0';
+
+	this->text->setString((std::string)switches);
+
+	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 250, this->view->getCenter().y - 300);
+
+	this->renderWindow->draw(*this->text);
+
+	//char switches[3];
+	
+	switches[1] = this->swtPositions.size() % 10 + 48;
+	switches[0] = '/';
+	switches[2] = '\0';
+
+	this->text->setString((std::string)switches);
+
+	this->text->setPosition(this->view->getCenter().x - 1920 / 2 + 270, this->view->getCenter().y - 300);
+
+	this->renderWindow->draw(*this->text);
 }
 
 void Game::renderPlayer()
@@ -931,13 +931,12 @@ void Game::render()
 	{
 		this->renderMapTiles();
 		this->renderBoxes();
-		
 		this->drawShopLogo();
-
 		this->renderZombies();
 		this->renderPlayer();
 		this->renderMapObjects();
 		this->renderPlayerInfo();
+		
 		if (!this->textDrawFinish && this->drawEvent)
 		{
 			this->renderWindow->draw(*this->textDisplay);
@@ -947,10 +946,11 @@ void Game::render()
 		{
 			this->drawShopMessage();
 		}
+		
 		this->renderTabInfo();
 		this->renderView();
 	}
-	if(this->menu->menuSelector == Pause || this->menu->menuSelector == GameOver || this->menu->menuSelector == Main || this->menu->menuSelector == Levels || this->menu->menuSelector == WinLevel || this->menu->menuSelector == Shop || this->menu->menuSelector==Controls)
+	if( !this->menu->menuSelector == Start )
 	{
 		if (this->menu->menuSelector == Main || this->menu->menuSelector == Levels || this->menu->menuSelector == Controls)
 		{
@@ -975,8 +975,8 @@ void Game::render()
 void Game::update()
 {
 	this->poolEvents();
-
 	this->updateTime();
+	
 	if (this->menu->menuSelector == Start)
 	{
 		this->updateView();
@@ -987,6 +987,7 @@ void Game::update()
 		this->updateView();
 
 	}
+	
 	if(this->menu->menuSelector == Main || this->menu->menuSelector == Start)
 	{
 		if (this->menu->restart)
@@ -1043,6 +1044,5 @@ Game::~Game()
 	delete(this->renderWindow);
 	delete(this->view);
 	delete(this->menu);
-
 }
 
