@@ -1,14 +1,14 @@
-#pragma once
+#ifndef GAMEENGINE_H_
+#define GAMEENGINE_H_
 
 #include <iostream>
+#include<fstream>
+#include<SFML/Graphics.hpp>
 #include"Player.h"
 #include"Zombie.h"
 #include"Box.h"
 #include"Map.h"
 #include"Menu.h"
-#include<SFML/Graphics.hpp>
-#include<SFML/System.hpp>
-#include<SFML/Window.hpp>
 
 #define windowWidth 1920
 #define windowHeight 1080
@@ -160,4 +160,6 @@ public:
 	void update();
 
 };
+
+#endif
 

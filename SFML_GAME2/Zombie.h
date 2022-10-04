@@ -1,9 +1,5 @@
-#pragma once
-
-#include <iostream>
-#include<SFML/Graphics.hpp>
-#include<SFML/System.hpp>
-#include<SFML/Window.hpp>
+#ifndef ZOMBIE_H_
+#define ZOMBIE_H_
 
 enum movementZombie { IDLEZ = 0, WALKZ, ATTACKZ, DEADZ };
 
@@ -102,3 +98,4 @@ protected:
 
 };
 
+#endif

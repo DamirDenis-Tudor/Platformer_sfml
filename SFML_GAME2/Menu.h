@@ -1,8 +1,5 @@
-#pragma once
-
-#include<iostream>
-#include<SFML/Graphics.hpp>
-#include<vector>
+#ifndef MENU_H_
+#define MENU_H_
 
 #define windowWidth 1920
 #define windowHeight 1080
@@ -56,3 +53,4 @@ public:
 	void renderMenu(sf::RenderTarget *target , sf::Vector2f viewPos , int &coins , int &diamonds , int&heath , int &shiends , int &attacks );
 };
 
+#endif

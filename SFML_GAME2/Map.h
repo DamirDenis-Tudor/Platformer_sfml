@@ -1,7 +1,5 @@
-#pragma once
-#include<iostream>
-#include<SFML/Graphics.hpp>
-#include<vector>
+#ifndef MAP_H_
+#define MAP_H_
 
 class Map
 {
@@ -42,3 +40,4 @@ public:
 	~Map();
 };
 
+#endif

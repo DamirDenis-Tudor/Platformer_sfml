@@ -1,9 +1,7 @@
-#pragma once
+#ifndef PLAYER_H_
+#define PLAYER_H_
 
-#include <iostream>
 #include<SFML/Graphics.hpp>
-#include<SFML/System.hpp>
-#include<SFML/Window.hpp>
 
 #define mapWidth 48
 #define mapHeight 27
@@ -24,7 +22,6 @@ enum movement { IDLE, WALK , RUN , JUMP, ATTACK , JUMPATTACK ,DEAD };
 class Player
 {
 private:
-
 
 	//sprite & texture for info bars
 	sf::Texture* infoTexture;
@@ -133,3 +130,5 @@ public:
 	Player(sf::Vector2f position);
 	~Player();
 };
+
+#endif

@@ -1,7 +1,5 @@
-#pragma once
-#include<iostream>
-#include<SFML/Graphics.hpp>
-#include<vector>
+#ifndef BOX_H_
+#define BOX_H_
 
 class Box
 {
@@ -68,3 +66,4 @@ public:
 	~Box();
 };
 
+#endif

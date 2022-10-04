@@ -1,3 +1,7 @@
+#include<iostream>
+#include<SFML/Graphics.hpp>
+#include<vector>
+
 #include "Map.h"
 
 //init

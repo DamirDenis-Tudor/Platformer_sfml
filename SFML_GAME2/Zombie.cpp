@@ -1,3 +1,6 @@
+#include <iostream>
+#include<SFML/Graphics.hpp>
+
 #include "Zombie.h"
 
 //init 

@@ -1,5 +1,8 @@
-#include "Box.h"
+#include<iostream>
+#include<SFML/Graphics.hpp>
+#include<vector>
 
+#include "Box.h"
 //init
 void Box::initVariables()
 {
