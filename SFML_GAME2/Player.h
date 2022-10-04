@@ -64,13 +64,9 @@ private:
 	bool rightCollision;
 	bool groundCollision;
 	bool topCollision;
-
-
 	bool isJumping;
-
 	float jumpHeight;
 	float currentGroungHeight;
-
 	bool maxHeightReached;
 	bool falling;
 

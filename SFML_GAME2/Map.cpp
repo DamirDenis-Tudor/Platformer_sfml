@@ -31,13 +31,16 @@ void Map::initSprite()
 
 void Map::renderMapLayer1(sf::RenderTarget* target, int**& map , int **&objects, int& width, int& height)
 {
+	//
+	// Tiled  -> generates two matrixs
+	//
 	target->draw(*this->bgSprite);
 	for (int i = 0; i < width; i++)
 	{
 		for (int j = 0; j < height; j++)
 		{
 			bool draw = true;
-			switch (map[i][j])
+			switch (map[i][j])//dirt types
 			{
 			case 1:
 				this->spriteDirt->setTextureRect(sf::IntRect{ 0 * 60, 0 , 60 , 60 });

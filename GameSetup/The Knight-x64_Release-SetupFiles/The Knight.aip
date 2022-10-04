@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="19.9" version="19.9" Modules="simple" RootPath="." Language="en" Id="{F5C5D05D-12C8-4EA5-9C39-D9981ED93E4D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_CURRENT_YEAR" Value="2022" ValueLocId="-"/>
+    <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 19.9 build de6d6401" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="BG.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="Summer Game Development"/>
+    <ROW Property="ProductCode" Value="1033:{7D90FDB4-CA43-4794-A77A-BED98B80D6B0} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="The Knight"/>
+    <ROW Property="ProductVersion" Value="1.0.5"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{64A766FE-B8F4-4D73-AE91-DE0AFEC19281}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="x64_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="x64_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="x64_Release:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="x64_Release:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="x64_Release:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="x64_Release:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="x64_Release:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="x64_Release:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="BG_Dir" Directory_Parent="png_Dir" DefaultDir="BG"/>
+    <ROW Directory="Box_Dir" Directory_Parent="sprites_Dir" DefaultDir="Box"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Object_Dir" Directory_Parent="png_Dir" DefaultDir="Object"/>
+    <ROW Directory="Objects_Dir" Directory_Parent="sprites_Dir" DefaultDir="Objects"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="Tiles_1_Dir" Directory_Parent="sprites_Dir" DefaultDir="Tiles"/>
+    <ROW Directory="Tiles_Dir" Directory_Parent="png_Dir" DefaultDir="Tiles"/>
+    <ROW Directory="Zombies_Dir" Directory_Parent="sprites_Dir" DefaultDir="Zombies"/>
+    <ROW Directory="buttons_Dir" Directory_Parent="menu_Dir" DefaultDir="buttons"/>
+    <ROW Directory="levels_Dir" Directory_Parent="APPDIR" DefaultDir="levels"/>
+    <ROW Directory="menu_Dir" Directory_Parent="APPDIR" DefaultDir="menu"/>
+    <ROW Directory="png_Dir" Directory_Parent="sprites_Dir" DefaultDir="png"/>
+    <ROW Directory="spriteSheets_Dir" Directory_Parent="sprites_Dir" DefaultDir="SPRITE~1|spriteSheets"/>
+    <ROW Directory="sprites_Dir" Directory_Parent="APPDIR" DefaultDir="sprites"/>
+    <ROW Directory="tileSets_Dir" Directory_Parent="levels_Dir" DefaultDir="tileSets"/>
+    <ROW Directory="windows_Dir" Directory_Parent="menu_Dir" DefaultDir="windows"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{6CD46194-D8DC-4DFA-A511-FA0A80BF252C}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ArrowSign.png" ComponentId="{94535DAE-2DE0-42FC-B3FC-98EA69217946}" Directory_="Objects_Dir" Attributes="0" KeyPath="ArrowSign.png" Type="0"/>
+    <ROW Component="ArrowSign.tsx" ComponentId="{D535C33C-2DCE-494A-B510-6E67F3670FD4}" Directory_="tileSets_Dir" Attributes="0" KeyPath="ArrowSign.tsx" Type="0"/>
+    <ROW Component="BG.png" ComponentId="{80C996A5-32BA-4B5D-8A6F-6C535B10E39C}" Directory_="sprites_Dir" Attributes="0" KeyPath="BG.png" Type="0"/>
+    <ROW Component="BG.png_1" ComponentId="{CA4A7F53-3429-44CE-8BD2-8ECB8A5E55E3}" Directory_="BG_Dir" Attributes="0" KeyPath="BG.png_1" Type="0"/>
+    <ROW Component="Bone1.png" ComponentId="{DFD67F2D-D282-4C74-AC0A-B21BD5BE241C}" Directory_="Tiles_1_Dir" Attributes="0" KeyPath="Bone1.png" Type="0"/>
+    <ROW Component="Bush1.png" ComponentId="{BB78ECB7-9F92-44B9-8508-FF17DC1EE681}" Directory_="Object_Dir" Attributes="0" KeyPath="Bush1.png_1" Type="0"/>
+    <ROW Component="Button.png" ComponentId="{C9E1A02F-C2A5-4AA0-855A-CACB9C73DFAA}" Directory_="buttons_Dir" Attributes="0" KeyPath="Button.png" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{170CA9F1-96FB-4399-BE35-89893F36F0F1}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{00FAEBAE-2DF2-4833-8217-9D14D0AD0828}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="TheKnight.exe" ComponentId="{89E19E65-8ECF-43F7-AF6E-107993E74152}" Directory_="APPDIR" Attributes="256" KeyPath="TheKnight.exe"/>
+    <ROW Component="Windows.png" ComponentId="{27A6C56F-D034-4141-A6FE-0CACFB6CBD5B}" Directory_="windows_Dir" Attributes="0" KeyPath="Windows.png" Type="0"/>
+    <ROW Component="bg.jpg" ComponentId="{AE14C083-7A84-4904-8AFE-04C658C5092F}" Directory_="menu_Dir" Attributes="0" KeyPath="bg.jpg" Type="0"/>
+    <ROW Component="box.png" ComponentId="{B59E5BD5-3E81-4115-B4F5-3A5AA68CDF22}" Directory_="Box_Dir" Attributes="0" KeyPath="box.png" Type="0"/>
+    <ROW Component="caracter.png" ComponentId="{00144C28-259A-48D1-9C4C-1C7F5A8CAF09}" Directory_="spriteSheets_Dir" Attributes="0" KeyPath="caracter.png" Type="0"/>
+    <ROW Component="level1.tmx" ComponentId="{956C1807-3A08-4824-9660-D7270770D2F4}" Directory_="levels_Dir" Attributes="0" KeyPath="level1.tmx" Type="0"/>
+    <ROW Component="openal32.dll" ComponentId="{3184F829-32E5-45EE-9055-1791D58E71EC}" Directory_="APPDIR" Attributes="256" KeyPath="openal32.dll"/>
+    <ROW Component="png" ComponentId="{801CB269-C486-4955-A8E8-3D626BE3568C}" Directory_="Tiles_Dir" Attributes="0" KeyPath="png" Type="0"/>
+    <ROW Component="sfmlaudio2.dll" ComponentId="{6F4DC377-D327-4EA8-835F-26F1F9D7BF2E}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlaudio2.dll"/>
+    <ROW Component="sfmlaudiod2.dll" ComponentId="{85904A42-496A-4E28-8D20-7A5631AF398F}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlaudiod2.dll"/>
+    <ROW Component="sfmlgraphics2.dll" ComponentId="{0C95EE0C-CB38-40D8-ABC3-925BE3974F03}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlgraphics2.dll"/>
+    <ROW Component="sfmlgraphicsd2.dll" ComponentId="{EE2D3395-A359-4B72-B806-3126931EEDFD}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlgraphicsd2.dll"/>
+    <ROW Component="sfmlnetwork2.dll" ComponentId="{4F1810B7-C39B-4DAA-9E76-1C140090D682}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlnetwork2.dll"/>
+    <ROW Component="sfmlnetworkd2.dll" ComponentId="{1B1BD3CC-62AB-4FDE-98F4-1FB1E04F6695}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlnetworkd2.dll"/>
+    <ROW Component="sfmlsystem2.dll" ComponentId="{9F979DC0-A193-414C-B0F6-CBC5E690318E}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlsystem2.dll"/>
+    <ROW Component="sfmlsystemd2.dll" ComponentId="{4908715A-DA60-43DA-BB9E-A75259AAA5AF}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlsystemd2.dll"/>
+    <ROW Component="sfmlwindow2.dll" ComponentId="{B2C0F876-0B12-4E0A-B741-D7AA76636994}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlwindow2.dll"/>
+    <ROW Component="sfmlwindowd2.dll" ComponentId="{7E00AE00-AFE9-40FF-BC8A-457235DC285F}" Directory_="APPDIR" Attributes="256" KeyPath="sfmlwindowd2.dll"/>
+    <ROW Component="zombieFemale.png" ComponentId="{37707826-A501-44C3-B698-A3BA0231C682}" Directory_="Zombies_Dir" Attributes="0" KeyPath="zombieFemale.png" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="TheKnight.exe" Component_="TheKnight.exe" FileName="THEKNI~1.EXE|The Knight.exe" Attributes="0" SourcePath="D:\vara\SFML_GAME2\x64\Release\The Knight.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="TheKnight.pdb" Component_="TheKnight.exe" FileName="THEKNI~1.PDB|The Knight.pdb" Attributes="0" SourcePath="D:\vara\SFML_GAME2\x64\Release\The Knight.pdb" SelfReg="false"/>
+    <ROW File="openal32.dll" Component_="openal32.dll" FileName="openal32.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\openal32.dll" SelfReg="false"/>
+    <ROW File="sfmlaudio2.dll" Component_="sfmlaudio2.dll" FileName="SFML-A~1.DLL|sfml-audio-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-audio-2.dll" SelfReg="false"/>
+    <ROW File="sfmlaudiod2.dll" Component_="sfmlaudiod2.dll" FileName="SFML-A~2.DLL|sfml-audio-d-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-audio-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlgraphics2.dll" Component_="sfmlgraphics2.dll" FileName="SFML-G~1.DLL|sfml-graphics-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-graphics-2.dll" SelfReg="false"/>
+    <ROW File="sfmlgraphicsd2.dll" Component_="sfmlgraphicsd2.dll" FileName="SFML-G~2.DLL|sfml-graphics-d-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-graphics-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlnetwork2.dll" Component_="sfmlnetwork2.dll" FileName="SFML-N~1.DLL|sfml-network-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-network-2.dll" SelfReg="false"/>
+    <ROW File="sfmlnetworkd2.dll" Component_="sfmlnetworkd2.dll" FileName="SFML-N~2.DLL|sfml-network-d-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-network-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlsystem2.dll" Component_="sfmlsystem2.dll" FileName="SFML-S~1.DLL|sfml-system-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-system-2.dll" SelfReg="false"/>
+    <ROW File="sfmlsystemd2.dll" Component_="sfmlsystemd2.dll" FileName="SFML-S~2.DLL|sfml-system-d-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-system-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlwindow2.dll" Component_="sfmlwindow2.dll" FileName="SFML-W~1.DLL|sfml-window-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-window-2.dll" SelfReg="false"/>
+    <ROW File="sfmlwindowd2.dll" Component_="sfmlwindowd2.dll" FileName="SFML-W~2.DLL|sfml-window-d-2.dll" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sfml-window-d-2.dll" SelfReg="false"/>
+    <ROW File="level1.tmx" Component_="level1.tmx" FileName="level1.tmx" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\levels\level1.tmx" SelfReg="false"/>
+    <ROW File="ArrowSign.tsx" Component_="ArrowSign.tsx" FileName="ARROWS~1.TSX|ArrowSign.tsx" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\levels\tileSets\ArrowSign.tsx" SelfReg="false"/>
+    <ROW File="bg.jpg" Component_="bg.jpg" FileName="bg.jpg" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\bg.jpg" SelfReg="false"/>
+    <ROW File="bgMenu.png" Component_="bg.jpg" FileName="bgMenu.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\bgMenu.png" SelfReg="false"/>
+    <ROW File="Button.png" Component_="Button.png" FileName="Button.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button.png" SelfReg="false"/>
+    <ROW File="Button.png.txt" Component_="Button.png" FileName="BUTTON~1.TXT|Button.png.txt" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button.png.txt" SelfReg="false"/>
+    <ROW File="Button_01.png" Component_="Button.png" FileName="BUTTON~1.PNG|Button_01.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_01.png" SelfReg="false"/>
+    <ROW File="Button_02.png" Component_="Button.png" FileName="BUTTON~2.PNG|Button_02.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_02.png" SelfReg="false"/>
+    <ROW File="Button_03.png" Component_="Button.png" FileName="BUTTON~3.PNG|Button_03.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_03.png" SelfReg="false"/>
+    <ROW File="Button_04.png" Component_="Button.png" FileName="BUTTON~4.PNG|Button_04.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_04.png" SelfReg="false"/>
+    <ROW File="Button_05.png" Component_="Button.png" FileName="BUTTON~5.PNG|Button_05.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_05.png" SelfReg="false"/>
+    <ROW File="Button_06.png" Component_="Button.png" FileName="BUTTON~6.PNG|Button_06.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_06.png" SelfReg="false"/>
+    <ROW File="Button_07.png" Component_="Button.png" FileName="BUTTON~7.PNG|Button_07.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_07.png" SelfReg="false"/>
+    <ROW File="Button_08.png" Component_="Button.png" FileName="BUTTON~8.PNG|Button_08.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_08.png" SelfReg="false"/>
+    <ROW File="Button_09.png" Component_="Button.png" FileName="BUTTON~9.PNG|Button_09.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_09.png" SelfReg="false"/>
+    <ROW File="Button_10.png" Component_="Button.png" FileName="BUTTO~10.PNG|Button_10.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_10.png" SelfReg="false"/>
+    <ROW File="Button_100.png" Component_="Button.png" FileName="BUTTO~11.PNG|Button_100.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_100.png" SelfReg="false"/>
+    <ROW File="Button_11.png" Component_="Button.png" FileName="BUTTO~12.PNG|Button_11.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_11.png" SelfReg="false"/>
+    <ROW File="Button_12.png" Component_="Button.png" FileName="BUTTO~13.PNG|Button_12.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_12.png" SelfReg="false"/>
+    <ROW File="Button_13.png" Component_="Button.png" FileName="BUTTO~14.PNG|Button_13.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_13.png" SelfReg="false"/>
+    <ROW File="Button_14.png" Component_="Button.png" FileName="BUTTO~15.PNG|Button_14.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_14.png" SelfReg="false"/>
+    <ROW File="Button_15.png" Component_="Button.png" FileName="BUTTO~16.PNG|Button_15.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_15.png" SelfReg="false"/>
+    <ROW File="Button_16.png" Component_="Button.png" FileName="BUTTO~17.PNG|Button_16.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_16.png" SelfReg="false"/>
+    <ROW File="Button_17.png" Component_="Button.png" FileName="BUTTO~18.PNG|Button_17.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_17.png" SelfReg="false"/>
+    <ROW File="Button_18.png" Component_="Button.png" FileName="BUTTO~19.PNG|Button_18.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_18.png" SelfReg="false"/>
+    <ROW File="Button_19.png" Component_="Button.png" FileName="BUTTO~20.PNG|Button_19.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_19.png" SelfReg="false"/>
+    <ROW File="Button_20.png" Component_="Button.png" FileName="BUTTO~21.PNG|Button_20.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_20.png" SelfReg="false"/>
+    <ROW File="Button_21.png" Component_="Button.png" FileName="BUTTO~22.PNG|Button_21.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_21.png" SelfReg="false"/>
+    <ROW File="Button_22.png" Component_="Button.png" FileName="BUTTO~23.PNG|Button_22.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_22.png" SelfReg="false"/>
+    <ROW File="Button_23.png" Component_="Button.png" FileName="BUTTO~24.PNG|Button_23.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_23.png" SelfReg="false"/>
+    <ROW File="Button_24.png" Component_="Button.png" FileName="BUTTO~25.PNG|Button_24.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_24.png" SelfReg="false"/>
+    <ROW File="Button_25.png" Component_="Button.png" FileName="BUTTO~26.PNG|Button_25.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_25.png" SelfReg="false"/>
+    <ROW File="Button_26.png" Component_="Button.png" FileName="BUTTO~27.PNG|Button_26.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_26.png" SelfReg="false"/>
+    <ROW File="Button_27.png" Component_="Button.png" FileName="BUTTO~28.PNG|Button_27.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_27.png" SelfReg="false"/>
+    <ROW File="Button_28.png" Component_="Button.png" FileName="BUTTO~29.PNG|Button_28.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_28.png" SelfReg="false"/>
+    <ROW File="Button_29.png" Component_="Button.png" FileName="BUTTO~30.PNG|Button_29.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_29.png" SelfReg="false"/>
+    <ROW File="Button_30.png" Component_="Button.png" FileName="BUTTO~31.PNG|Button_30.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_30.png" SelfReg="false"/>
+    <ROW File="Button_31.png" Component_="Button.png" FileName="BUTTO~32.PNG|Button_31.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_31.png" SelfReg="false"/>
+    <ROW File="Button_32.png" Component_="Button.png" FileName="BUTTO~33.PNG|Button_32.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_32.png" SelfReg="false"/>
+    <ROW File="Button_33.png" Component_="Button.png" FileName="BUTTO~34.PNG|Button_33.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_33.png" SelfReg="false"/>
+    <ROW File="Button_34.png" Component_="Button.png" FileName="BUTTO~35.PNG|Button_34.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_34.png" SelfReg="false"/>
+    <ROW File="Button_35.png" Component_="Button.png" FileName="BUTTO~36.PNG|Button_35.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_35.png" SelfReg="false"/>
+    <ROW File="Button_36.png" Component_="Button.png" FileName="BUTTO~37.PNG|Button_36.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_36.png" SelfReg="false"/>
+    <ROW File="Button_37.png" Component_="Button.png" FileName="BUTTO~38.PNG|Button_37.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_37.png" SelfReg="false"/>
+    <ROW File="Button_38.png" Component_="Button.png" FileName="BUTTO~39.PNG|Button_38.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_38.png" SelfReg="false"/>
+    <ROW File="Button_39.png" Component_="Button.png" FileName="BUTTO~40.PNG|Button_39.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_39.png" SelfReg="false"/>
+    <ROW File="Button_40.png" Component_="Button.png" FileName="BUTTO~41.PNG|Button_40.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_40.png" SelfReg="false"/>
+    <ROW File="Button_41.png" Component_="Button.png" FileName="BUTTO~42.PNG|Button_41.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_41.png" SelfReg="false"/>
+    <ROW File="Button_42.png" Component_="Button.png" FileName="BUTTO~43.PNG|Button_42.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_42.png" SelfReg="false"/>
+    <ROW File="Button_43.png" Component_="Button.png" FileName="BUTTO~44.PNG|Button_43.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_43.png" SelfReg="false"/>
+    <ROW File="Button_44.png" Component_="Button.png" FileName="BUTTO~45.PNG|Button_44.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_44.png" SelfReg="false"/>
+    <ROW File="Button_45.png" Component_="Button.png" FileName="BUTTO~46.PNG|Button_45.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_45.png" SelfReg="false"/>
+    <ROW File="Button_46.png" Component_="Button.png" FileName="BUTTO~47.PNG|Button_46.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_46.png" SelfReg="false"/>
+    <ROW File="Button_47.png" Component_="Button.png" FileName="BUTTO~48.PNG|Button_47.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_47.png" SelfReg="false"/>
+    <ROW File="Button_48.png" Component_="Button.png" FileName="BUTTO~49.PNG|Button_48.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_48.png" SelfReg="false"/>
+    <ROW File="Button_49.png" Component_="Button.png" FileName="BUTTO~50.PNG|Button_49.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_49.png" SelfReg="false"/>
+    <ROW File="Button_50.png" Component_="Button.png" FileName="BUTTO~51.PNG|Button_50.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_50.png" SelfReg="false"/>
+    <ROW File="Button_51.png" Component_="Button.png" FileName="BUTTO~52.PNG|Button_51.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_51.png" SelfReg="false"/>
+    <ROW File="Button_52.png" Component_="Button.png" FileName="BUTTO~53.PNG|Button_52.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_52.png" SelfReg="false"/>
+    <ROW File="Button_53.png" Component_="Button.png" FileName="BUTTO~54.PNG|Button_53.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_53.png" SelfReg="false"/>
+    <ROW File="Button_54.png" Component_="Button.png" FileName="BUTTO~55.PNG|Button_54.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_54.png" SelfReg="false"/>
+    <ROW File="Button_55.png" Component_="Button.png" FileName="BUTTO~56.PNG|Button_55.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_55.png" SelfReg="false"/>
+    <ROW File="Button_56.png" Component_="Button.png" FileName="BUTTO~57.PNG|Button_56.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_56.png" SelfReg="false"/>
+    <ROW File="Button_57.png" Component_="Button.png" FileName="BUTTO~58.PNG|Button_57.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_57.png" SelfReg="false"/>
+    <ROW File="Button_58.png" Component_="Button.png" FileName="BUTTO~59.PNG|Button_58.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_58.png" SelfReg="false"/>
+    <ROW File="Button_59.png" Component_="Button.png" FileName="BUTTO~60.PNG|Button_59.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_59.png" SelfReg="false"/>
+    <ROW File="Button_60.png" Component_="Button.png" FileName="BUTTO~61.PNG|Button_60.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_60.png" SelfReg="false"/>
+    <ROW File="Button_61.png" Component_="Button.png" FileName="BUTTO~62.PNG|Button_61.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_61.png" SelfReg="false"/>
+    <ROW File="Button_62.png" Component_="Button.png" FileName="BUTTO~63.PNG|Button_62.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_62.png" SelfReg="false"/>
+    <ROW File="Button_63.png" Component_="Button.png" FileName="BUTTO~64.PNG|Button_63.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_63.png" SelfReg="false"/>
+    <ROW File="Button_64.png" Component_="Button.png" FileName="BUTTO~65.PNG|Button_64.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_64.png" SelfReg="false"/>
+    <ROW File="Button_65.png" Component_="Button.png" FileName="BUTTO~66.PNG|Button_65.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_65.png" SelfReg="false"/>
+    <ROW File="Button_66.png" Component_="Button.png" FileName="BUTTO~67.PNG|Button_66.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_66.png" SelfReg="false"/>
+    <ROW File="Button_67.png" Component_="Button.png" FileName="BUTTO~68.PNG|Button_67.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_67.png" SelfReg="false"/>
+    <ROW File="Button_68.png" Component_="Button.png" FileName="BUTTO~69.PNG|Button_68.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_68.png" SelfReg="false"/>
+    <ROW File="Button_69.png" Component_="Button.png" FileName="BUTTO~70.PNG|Button_69.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_69.png" SelfReg="false"/>
+    <ROW File="Button_70.png" Component_="Button.png" FileName="BUTTO~71.PNG|Button_70.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_70.png" SelfReg="false"/>
+    <ROW File="Button_71.png" Component_="Button.png" FileName="BUTTO~72.PNG|Button_71.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_71.png" SelfReg="false"/>
+    <ROW File="Button_72.png" Component_="Button.png" FileName="BUTTO~73.PNG|Button_72.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_72.png" SelfReg="false"/>
+    <ROW File="Button_73.png" Component_="Button.png" FileName="BUTTO~74.PNG|Button_73.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_73.png" SelfReg="false"/>
+    <ROW File="Button_74.png" Component_="Button.png" FileName="BUTTO~75.PNG|Button_74.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_74.png" SelfReg="false"/>
+    <ROW File="Button_75.png" Component_="Button.png" FileName="BUTTO~76.PNG|Button_75.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_75.png" SelfReg="false"/>
+    <ROW File="Button_76.png" Component_="Button.png" FileName="BUTTO~77.PNG|Button_76.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_76.png" SelfReg="false"/>
+    <ROW File="Button_77.png" Component_="Button.png" FileName="BUTTO~78.PNG|Button_77.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_77.png" SelfReg="false"/>
+    <ROW File="Button_78.png" Component_="Button.png" FileName="BUTTO~79.PNG|Button_78.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_78.png" SelfReg="false"/>
+    <ROW File="Button_79.png" Component_="Button.png" FileName="BUTTO~80.PNG|Button_79.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_79.png" SelfReg="false"/>
+    <ROW File="Button_80.png" Component_="Button.png" FileName="BUTTO~81.PNG|Button_80.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_80.png" SelfReg="false"/>
+    <ROW File="Button_81.png" Component_="Button.png" FileName="BUTTO~82.PNG|Button_81.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_81.png" SelfReg="false"/>
+    <ROW File="Button_82.png" Component_="Button.png" FileName="BUTTO~83.PNG|Button_82.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_82.png" SelfReg="false"/>
+    <ROW File="Button_83.png" Component_="Button.png" FileName="BUTTO~84.PNG|Button_83.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_83.png" SelfReg="false"/>
+    <ROW File="Button_84.png" Component_="Button.png" FileName="BUTTO~85.PNG|Button_84.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_84.png" SelfReg="false"/>
+    <ROW File="Button_85.png" Component_="Button.png" FileName="BUTTO~86.PNG|Button_85.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_85.png" SelfReg="false"/>
+    <ROW File="Button_86.png" Component_="Button.png" FileName="BUTTO~87.PNG|Button_86.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_86.png" SelfReg="false"/>
+    <ROW File="Button_87.png" Component_="Button.png" FileName="BUTTO~88.PNG|Button_87.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_87.png" SelfReg="false"/>
+    <ROW File="Button_88.png" Component_="Button.png" FileName="BUTTO~89.PNG|Button_88.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_88.png" SelfReg="false"/>
+    <ROW File="Button_89.png" Component_="Button.png" FileName="BUTTO~90.PNG|Button_89.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_89.png" SelfReg="false"/>
+    <ROW File="Button_90.png" Component_="Button.png" FileName="BUTTO~91.PNG|Button_90.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_90.png" SelfReg="false"/>
+    <ROW File="Button_91.png" Component_="Button.png" FileName="BUTTO~92.PNG|Button_91.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_91.png" SelfReg="false"/>
+    <ROW File="Button_92.png" Component_="Button.png" FileName="BUTTO~93.PNG|Button_92.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_92.png" SelfReg="false"/>
+    <ROW File="Button_93.png" Component_="Button.png" FileName="BUTTO~94.PNG|Button_93.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_93.png" SelfReg="false"/>
+    <ROW File="Button_94.png" Component_="Button.png" FileName="BUTTO~95.PNG|Button_94.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_94.png" SelfReg="false"/>
+    <ROW File="Button_95.png" Component_="Button.png" FileName="BUTTO~96.PNG|Button_95.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_95.png" SelfReg="false"/>
+    <ROW File="Button_96.png" Component_="Button.png" FileName="BUTTO~97.PNG|Button_96.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_96.png" SelfReg="false"/>
+    <ROW File="Button_97.png" Component_="Button.png" FileName="BUTTO~98.PNG|Button_97.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_97.png" SelfReg="false"/>
+    <ROW File="Button_98.png" Component_="Button.png" FileName="BUTTO~99.PNG|Button_98.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_98.png" SelfReg="false"/>
+    <ROW File="Button_99.png" Component_="Button.png" FileName="BUTT~100.PNG|Button_99.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_99.png" SelfReg="false"/>
+    <ROW File="Button_v.png" Component_="Button.png" FileName="BUTT~101.PNG|Button_@v.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\buttons\Button_@v.png" SelfReg="false"/>
+    <ROW File="EvilEmpire4BBVK.ttf" Component_="bg.jpg" FileName="EVILEM~1.TTF|EvilEmpire-4BBVK.ttf" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\EvilEmpire-4BBVK.ttf" SelfReg="false"/>
+    <ROW File="menu.png" Component_="bg.jpg" FileName="menu.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\menu.png" SelfReg="false"/>
+    <ROW File="menu1.png" Component_="bg.jpg" FileName="menu1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\menu1.png" SelfReg="false"/>
+    <ROW File="menuSheet.tps" Component_="bg.jpg" FileName="MENUSH~1.TPS|menuSheet.tps" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\menuSheet.tps" SelfReg="false"/>
+    <ROW File="Windows.png" Component_="Windows.png" FileName="Windows.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows.png" SelfReg="false"/>
+    <ROW File="Windows.png.txt" Component_="Windows.png" FileName="WINDOW~1.TXT|Windows.png.txt" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows.png.txt" SelfReg="false"/>
+    <ROW File="Windows_01.png" Component_="Windows.png" FileName="WINDOW~1.PNG|Windows_01.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_01.png" SelfReg="false"/>
+    <ROW File="Windows_02.png" Component_="Windows.png" FileName="WINDOW~2.PNG|Windows_02.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_02.png" SelfReg="false"/>
+    <ROW File="Windows_03.png" Component_="Windows.png" FileName="WINDOW~3.PNG|Windows_03.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_03.png" SelfReg="false"/>
+    <ROW File="Windows_04.png" Component_="Windows.png" FileName="WINDOW~4.PNG|Windows_04.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_04.png" SelfReg="false"/>
+    <ROW File="Windows_05.png" Component_="Windows.png" FileName="WINDOW~5.PNG|Windows_05.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_05.png" SelfReg="false"/>
+    <ROW File="Windows_06.png" Component_="Windows.png" FileName="WINDOW~6.PNG|Windows_06.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_06.png" SelfReg="false"/>
+    <ROW File="Windows_07.png" Component_="Windows.png" FileName="WINDOW~7.PNG|Windows_07.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_07.png" SelfReg="false"/>
+    <ROW File="Windows_08.png" Component_="Windows.png" FileName="WINDOW~8.PNG|Windows_08.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_08.png" SelfReg="false"/>
+    <ROW File="Windows_09.png" Component_="Windows.png" FileName="WINDOW~9.PNG|Windows_09.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_09.png" SelfReg="false"/>
+    <ROW File="Windows_10.png" Component_="Windows.png" FileName="WINDO~10.PNG|Windows_10.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_10.png" SelfReg="false"/>
+    <ROW File="Windows_11.png" Component_="Windows.png" FileName="WINDO~11.PNG|Windows_11.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_11.png" SelfReg="false"/>
+    <ROW File="Windows_12.png" Component_="Windows.png" FileName="WINDO~12.PNG|Windows_12.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_12.png" SelfReg="false"/>
+    <ROW File="Windows_13.png" Component_="Windows.png" FileName="WINDO~13.PNG|Windows_13.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_13.png" SelfReg="false"/>
+    <ROW File="Windows_14.png" Component_="Windows.png" FileName="WINDO~14.PNG|Windows_14.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_14.png" SelfReg="false"/>
+    <ROW File="Windows_15.png" Component_="Windows.png" FileName="WINDO~15.PNG|Windows_15.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_15.png" SelfReg="false"/>
+    <ROW File="Windows_16.png" Component_="Windows.png" FileName="WINDO~16.PNG|Windows_16.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_16.png" SelfReg="false"/>
+    <ROW File="Windows_17.png" Component_="Windows.png" FileName="WINDO~17.PNG|Windows_17.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_17.png" SelfReg="false"/>
+    <ROW File="Windows_18.png" Component_="Windows.png" FileName="WINDO~18.PNG|Windows_18.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_18.png" SelfReg="false"/>
+    <ROW File="Windows_19.png" Component_="Windows.png" FileName="WINDO~19.PNG|Windows_19.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_19.png" SelfReg="false"/>
+    <ROW File="Windows_20.png" Component_="Windows.png" FileName="WINDO~20.PNG|Windows_20.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_20.png" SelfReg="false"/>
+    <ROW File="Windows_21.png" Component_="Windows.png" FileName="WINDO~21.PNG|Windows_21.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_21.png" SelfReg="false"/>
+    <ROW File="Windows_22.png" Component_="Windows.png" FileName="WINDO~22.PNG|Windows_22.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_22.png" SelfReg="false"/>
+    <ROW File="Windows_23.png" Component_="Windows.png" FileName="WINDO~23.PNG|Windows_23.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_23.png" SelfReg="false"/>
+    <ROW File="Windows_24.png" Component_="Windows.png" FileName="WINDO~24.PNG|Windows_24.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_24.png" SelfReg="false"/>
+    <ROW File="Windows_25.png" Component_="Windows.png" FileName="WINDO~25.PNG|Windows_25.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_25.png" SelfReg="false"/>
+    <ROW File="Windows_26.png" Component_="Windows.png" FileName="WINDO~26.PNG|Windows_26.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_26.png" SelfReg="false"/>
+    <ROW File="Windows_27.png" Component_="Windows.png" FileName="WINDO~27.PNG|Windows_27.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_27.png" SelfReg="false"/>
+    <ROW File="Windows_28.png" Component_="Windows.png" FileName="WINDO~28.PNG|Windows_28.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_28.png" SelfReg="false"/>
+    <ROW File="Windows_29.png" Component_="Windows.png" FileName="WINDO~29.PNG|Windows_29.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_29.png" SelfReg="false"/>
+    <ROW File="Windows_30.png" Component_="Windows.png" FileName="WINDO~30.PNG|Windows_30.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_30.png" SelfReg="false"/>
+    <ROW File="Windows_31.png" Component_="Windows.png" FileName="WINDO~31.PNG|Windows_31.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_31.png" SelfReg="false"/>
+    <ROW File="Windows_32.png" Component_="Windows.png" FileName="WINDO~32.PNG|Windows_32.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_32.png" SelfReg="false"/>
+    <ROW File="Windows_33.png" Component_="Windows.png" FileName="WINDO~33.PNG|Windows_33.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_33.png" SelfReg="false"/>
+    <ROW File="Windows_34.png" Component_="Windows.png" FileName="WINDO~34.PNG|Windows_34.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_34.png" SelfReg="false"/>
+    <ROW File="Windows_35.png" Component_="Windows.png" FileName="WINDO~35.PNG|Windows_35.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_35.png" SelfReg="false"/>
+    <ROW File="Windows_36.png" Component_="Windows.png" FileName="WINDO~36.PNG|Windows_36.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_36.png" SelfReg="false"/>
+    <ROW File="Windows_37.png" Component_="Windows.png" FileName="WINDO~37.PNG|Windows_37.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_37.png" SelfReg="false"/>
+    <ROW File="Windows_38.png" Component_="Windows.png" FileName="WINDO~38.PNG|Windows_38.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_38.png" SelfReg="false"/>
+    <ROW File="Windows_39.png" Component_="Windows.png" FileName="WINDO~39.PNG|Windows_39.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_39.png" SelfReg="false"/>
+    <ROW File="Windows_40.png" Component_="Windows.png" FileName="WINDO~40.PNG|Windows_40.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_40.png" SelfReg="false"/>
+    <ROW File="Windows_41.png" Component_="Windows.png" FileName="WINDO~41.PNG|Windows_41.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_41.png" SelfReg="false"/>
+    <ROW File="Windows_42.png" Component_="Windows.png" FileName="WINDO~42.PNG|Windows_42.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_42.png" SelfReg="false"/>
+    <ROW File="Windows_43.png" Component_="Windows.png" FileName="WINDO~43.PNG|Windows_43.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_43.png" SelfReg="false"/>
+    <ROW File="Windows_44.png" Component_="Windows.png" FileName="WINDO~44.PNG|Windows_44.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_44.png" SelfReg="false"/>
+    <ROW File="Windows_45.png" Component_="Windows.png" FileName="WINDO~45.PNG|Windows_45.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_45.png" SelfReg="false"/>
+    <ROW File="Windows_46.png" Component_="Windows.png" FileName="WINDO~46.PNG|Windows_46.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_46.png" SelfReg="false"/>
+    <ROW File="Windows_47.png" Component_="Windows.png" FileName="WINDO~47.PNG|Windows_47.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_47.png" SelfReg="false"/>
+    <ROW File="Windows_48.png" Component_="Windows.png" FileName="WINDO~48.PNG|Windows_48.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_48.png" SelfReg="false"/>
+    <ROW File="Windows_49.png" Component_="Windows.png" FileName="WINDO~49.PNG|Windows_49.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_49.png" SelfReg="false"/>
+    <ROW File="Windows_50.png" Component_="Windows.png" FileName="WINDO~50.PNG|Windows_50.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_50.png" SelfReg="false"/>
+    <ROW File="Windows_51.png" Component_="Windows.png" FileName="WINDO~51.PNG|Windows_51.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_51.png" SelfReg="false"/>
+    <ROW File="Windows_52.png" Component_="Windows.png" FileName="WINDO~52.PNG|Windows_52.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_52.png" SelfReg="false"/>
+    <ROW File="Windows_53.png" Component_="Windows.png" FileName="WINDO~53.PNG|Windows_53.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_53.png" SelfReg="false"/>
+    <ROW File="Windows_54.png" Component_="Windows.png" FileName="WINDO~54.PNG|Windows_54.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_54.png" SelfReg="false"/>
+    <ROW File="Windows_55.png" Component_="Windows.png" FileName="WINDO~55.PNG|Windows_55.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\menu\windows\Windows_55.png" SelfReg="false"/>
+    <ROW File="BG.png" Component_="BG.png" FileName="BG.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\BG.png" SelfReg="false"/>
+    <ROW File="box.png" Component_="box.png" FileName="box.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Box\box.png" SelfReg="false"/>
+    <ROW File="dirt1.png" Component_="BG.png" FileName="dirt1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\dirt1.png" SelfReg="false"/>
+    <ROW File="ArrowSign.png" Component_="ArrowSign.png" FileName="ARROWS~1.PNG|ArrowSign.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\ArrowSign.png" SelfReg="false"/>
+    <ROW File="Bush1.png" Component_="ArrowSign.png" FileName="BUSH(1~1.PNG|Bush (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Bush (1).png" SelfReg="false"/>
+    <ROW File="Bush2.png" Component_="ArrowSign.png" FileName="BUSH(2~1.PNG|Bush (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Bush (2).png" SelfReg="false"/>
+    <ROW File="chest.png" Component_="ArrowSign.png" FileName="chest.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\chest.png" SelfReg="false"/>
+    <ROW File="Crate.png" Component_="ArrowSign.png" FileName="Crate.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Crate.png" SelfReg="false"/>
+    <ROW File="DeadBush.png" Component_="ArrowSign.png" FileName="DeadBush.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\DeadBush.png" SelfReg="false"/>
+    <ROW File="DoorLocked.png" Component_="ArrowSign.png" FileName="DOORLO~1.PNG|DoorLocked.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\DoorLocked.png" SelfReg="false"/>
+    <ROW File="DoorOpen.png" Component_="ArrowSign.png" FileName="DoorOpen.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\DoorOpen.png" SelfReg="false"/>
+    <ROW File="DoorUnlocked.png" Component_="ArrowSign.png" FileName="DOORUN~1.PNG|DoorUnlocked.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\DoorUnlocked.png" SelfReg="false"/>
+    <ROW File="Fence1.png" Component_="ArrowSign.png" FileName="FENCE(~1.PNG|Fence (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Fence (1).png" SelfReg="false"/>
+    <ROW File="Fence2.png" Component_="ArrowSign.png" FileName="FENCE(~2.PNG|Fence (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Fence (2).png" SelfReg="false"/>
+    <ROW File="Fence3.png" Component_="ArrowSign.png" FileName="FENCE(~3.PNG|Fence (3).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Fence (3).png" SelfReg="false"/>
+    <ROW File="Sign.png" Component_="ArrowSign.png" FileName="Sign.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Sign.png" SelfReg="false"/>
+    <ROW File="Skeleton.png" Component_="ArrowSign.png" FileName="Skeleton.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Skeleton.png" SelfReg="false"/>
+    <ROW File="Spike.png" Component_="ArrowSign.png" FileName="Spike.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Spike.png" SelfReg="false"/>
+    <ROW File="Switch1.png" Component_="ArrowSign.png" FileName="SWITCH~1.PNG|Switch (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Switch (1).png" SelfReg="false"/>
+    <ROW File="Switch2.png" Component_="ArrowSign.png" FileName="SWITCH~2.PNG|Switch (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Switch (2).png" SelfReg="false"/>
+    <ROW File="TombStone1.png" Component_="ArrowSign.png" FileName="TOMBST~1.PNG|TombStone (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\TombStone (1).png" SelfReg="false"/>
+    <ROW File="TombStone2.png" Component_="ArrowSign.png" FileName="TOMBST~2.PNG|TombStone (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\TombStone (2).png" SelfReg="false"/>
+    <ROW File="Tree.png" Component_="ArrowSign.png" FileName="Tree.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Objects\Tree.png" SelfReg="false"/>
+    <ROW File="BG.png_1" Component_="BG.png_1" FileName="BG.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\BG\BG.png" SelfReg="false"/>
+    <ROW File="Bush1.png_1" Component_="Bush1.png" FileName="BUSH(1~1.PNG|Bush (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Bush (1).png" SelfReg="false"/>
+    <ROW File="Bush2.png_1" Component_="Bush1.png" FileName="BUSH(2~1.PNG|Bush (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Bush (2).png" SelfReg="false"/>
+    <ROW File="Bush3.png" Component_="Bush1.png" FileName="BUSH(3~1.PNG|Bush (3).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Bush (3).png" SelfReg="false"/>
+    <ROW File="Bush4.png" Component_="Bush1.png" FileName="BUSH(4~1.PNG|Bush (4).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Bush (4).png" SelfReg="false"/>
+    <ROW File="Crate.png_1" Component_="Bush1.png" FileName="Crate.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Crate.png" SelfReg="false"/>
+    <ROW File="Mushroom_1.png" Component_="Bush1.png" FileName="MUSHRO~1.PNG|Mushroom_1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Mushroom_1.png" SelfReg="false"/>
+    <ROW File="Mushroom_2.png" Component_="Bush1.png" FileName="MUSHRO~2.PNG|Mushroom_2.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Mushroom_2.png" SelfReg="false"/>
+    <ROW File="Sign_1.png" Component_="Bush1.png" FileName="Sign_1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Sign_1.png" SelfReg="false"/>
+    <ROW File="Sign_2.png" Component_="Bush1.png" FileName="Sign_2.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Sign_2.png" SelfReg="false"/>
+    <ROW File="Stone.png" Component_="Bush1.png" FileName="Stone.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Stone.png" SelfReg="false"/>
+    <ROW File="Tree_1.png" Component_="Bush1.png" FileName="Tree_1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Tree_1.png" SelfReg="false"/>
+    <ROW File="Tree_2.png" Component_="Bush1.png" FileName="Tree_2.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Tree_2.png" SelfReg="false"/>
+    <ROW File="Tree_3.png" Component_="Bush1.png" FileName="Tree_3.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Object\Tree_3.png" SelfReg="false"/>
+    <ROW File="png" Component_="png" FileName="1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\1.png" SelfReg="false"/>
+    <ROW File="png_1" Component_="png" FileName="10.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\10.png" SelfReg="false"/>
+    <ROW File="png_2" Component_="png" FileName="11.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\11.png" SelfReg="false"/>
+    <ROW File="png_3" Component_="png" FileName="12.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\12.png" SelfReg="false"/>
+    <ROW File="png_4" Component_="png" FileName="13.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\13.png" SelfReg="false"/>
+    <ROW File="png_5" Component_="png" FileName="14.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\14.png" SelfReg="false"/>
+    <ROW File="png_6" Component_="png" FileName="15.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\15.png" SelfReg="false"/>
+    <ROW File="png_7" Component_="png" FileName="16.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\16.png" SelfReg="false"/>
+    <ROW File="png_8" Component_="png" FileName="17.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\17.png" SelfReg="false"/>
+    <ROW File="png_9" Component_="png" FileName="18.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\18.png" SelfReg="false"/>
+    <ROW File="png_10" Component_="png" FileName="2.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\2.png" SelfReg="false"/>
+    <ROW File="png_11" Component_="png" FileName="3.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\3.png" SelfReg="false"/>
+    <ROW File="png_12" Component_="png" FileName="4.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\4.png" SelfReg="false"/>
+    <ROW File="png_13" Component_="png" FileName="5.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\5.png" SelfReg="false"/>
+    <ROW File="png_14" Component_="png" FileName="6.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\6.png" SelfReg="false"/>
+    <ROW File="png_15" Component_="png" FileName="7.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\7.png" SelfReg="false"/>
+    <ROW File="png_16" Component_="png" FileName="8.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\8.png" SelfReg="false"/>
+    <ROW File="png_17" Component_="png" FileName="9.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\png\Tiles\9.png" SelfReg="false"/>
+    <ROW File="caracter.png" Component_="caracter.png" FileName="caracter.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\caracter.png" SelfReg="false"/>
+    <ROW File="dirt.png" Component_="caracter.png" FileName="dirt.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\dirt.png" SelfReg="false"/>
+    <ROW File="infoPLywe.tps" Component_="caracter.png" FileName="INFOPL~1.TPS|infoPLywe.tps" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\infoPLywe.tps" SelfReg="false"/>
+    <ROW File="knightCaracter.png" Component_="caracter.png" FileName="KNIGHT~1.PNG|knightCaracter.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\knightCaracter.png" SelfReg="false"/>
+    <ROW File="objects3.png" Component_="caracter.png" FileName="objects3.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\objects3.png" SelfReg="false"/>
+    <ROW File="objSheet.tps" Component_="caracter.png" FileName="objSheet.tps" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\objSheet.tps" SelfReg="false"/>
+    <ROW File="playerInfo.png" Component_="caracter.png" FileName="PLAYER~1.PNG|playerInfo.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\playerInfo.png" SelfReg="false"/>
+    <ROW File="shhetKnight.tps" Component_="caracter.png" FileName="SHHETK~1.TPS|shhetKnight.tps" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\spriteSheets\shhetKnight.tps" SelfReg="false"/>
+    <ROW File="Bone1.png" Component_="Bone1.png" FileName="BONE(1~1.PNG|Bone (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Bone (1).png" SelfReg="false"/>
+    <ROW File="Bone2.png" Component_="Bone1.png" FileName="BONE(2~1.PNG|Bone (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Bone (2).png" SelfReg="false"/>
+    <ROW File="Bone3.png" Component_="Bone1.png" FileName="BONE(3~1.PNG|Bone (3).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Bone (3).png" SelfReg="false"/>
+    <ROW File="Bone4.png" Component_="Bone1.png" FileName="BONE(4~1.PNG|Bone (4).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Bone (4).png" SelfReg="false"/>
+    <ROW File="Tile1.png" Component_="Bone1.png" FileName="TILE(1~1.PNG|Tile (1).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (1).png" SelfReg="false"/>
+    <ROW File="Tile10.png" Component_="Bone1.png" FileName="TILE(1~2.PNG|Tile (10).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (10).png" SelfReg="false"/>
+    <ROW File="Tile11.png" Component_="Bone1.png" FileName="TILE(1~3.PNG|Tile (11).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (11).png" SelfReg="false"/>
+    <ROW File="Tile12.png" Component_="Bone1.png" FileName="TILE(1~4.PNG|Tile (12).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (12).png" SelfReg="false"/>
+    <ROW File="Tile13.png" Component_="Bone1.png" FileName="TILE(1~5.PNG|Tile (13).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (13).png" SelfReg="false"/>
+    <ROW File="Tile14.png" Component_="Bone1.png" FileName="TILE(1~6.PNG|Tile (14).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (14).png" SelfReg="false"/>
+    <ROW File="Tile15.png" Component_="Bone1.png" FileName="TILE(1~7.PNG|Tile (15).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (15).png" SelfReg="false"/>
+    <ROW File="Tile16.png" Component_="Bone1.png" FileName="TILE(1~8.PNG|Tile (16).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (16).png" SelfReg="false"/>
+    <ROW File="Tile2.png" Component_="Bone1.png" FileName="TILE(2~1.PNG|Tile (2).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (2).png" SelfReg="false"/>
+    <ROW File="Tile3.png" Component_="Bone1.png" FileName="TILE(3~1.PNG|Tile (3).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (3).png" SelfReg="false"/>
+    <ROW File="Tile4.png" Component_="Bone1.png" FileName="TILE(4~1.PNG|Tile (4).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (4).png" SelfReg="false"/>
+    <ROW File="Tile5.png" Component_="Bone1.png" FileName="TILE(5~1.PNG|Tile (5).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (5).png" SelfReg="false"/>
+    <ROW File="Tile6.png" Component_="Bone1.png" FileName="TILE(6~1.PNG|Tile (6).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (6).png" SelfReg="false"/>
+    <ROW File="Tile7.png" Component_="Bone1.png" FileName="TILE(7~1.PNG|Tile (7).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (7).png" SelfReg="false"/>
+    <ROW File="Tile8.png" Component_="Bone1.png" FileName="TILE(8~1.PNG|Tile (8).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (8).png" SelfReg="false"/>
+    <ROW File="Tile9.png" Component_="Bone1.png" FileName="TILE(9~1.PNG|Tile (9).png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\Tile (9).png" SelfReg="false"/>
+    <ROW File="tiles.png" Component_="Bone1.png" FileName="tiles.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Tiles\tiles.png" SelfReg="false"/>
+    <ROW File="zombieFemale.png" Component_="zombieFemale.png" FileName="ZOMBIE~1.PNG|zombieFemale.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Zombies\zombieFemale.png" SelfReg="false"/>
+    <ROW File="zombieFemale1.png" Component_="zombieFemale.png" FileName="ZOMBIE~2.PNG|zombieFemale1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Zombies\zombieFemale1.png" SelfReg="false"/>
+    <ROW File="zombieMale.png" Component_="zombieFemale.png" FileName="ZOMBIE~3.PNG|zombieMale.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Zombies\zombieMale.png" SelfReg="false"/>
+    <ROW File="zombieMale1.png" Component_="zombieFemale.png" FileName="ZOMBIE~4.PNG|zombieMale1.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Zombies\zombieMale1.png" SelfReg="false"/>
+    <ROW File="zombieMale2.png" Component_="zombieFemale.png" FileName="ZOMBIE~5.PNG|zombieMale2.png" Attributes="0" SourcePath="D:\vara\SFML_GAME2\SFML_GAME2\sprites\Zombies\zombieMale2.png" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="x64_Release" BuildName="x64_Release" BuildOrder="1" BuildType="0" PackageFileName="x64_Release" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="TheKnight.exe"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="openal32.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlaudio2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlaudiod2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlgraphics2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlgraphicsd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlnetwork2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlnetworkd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlsystem2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlsystemd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlwindow2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlwindowd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="level1.tmx"/>
+    <ROW Feature_="MainFeature" Component_="ArrowSign.tsx"/>
+    <ROW Feature_="MainFeature" Component_="bg.jpg"/>
+    <ROW Feature_="MainFeature" Component_="Button.png"/>
+    <ROW Feature_="MainFeature" Component_="Windows.png"/>
+    <ROW Feature_="MainFeature" Component_="BG.png"/>
+    <ROW Feature_="MainFeature" Component_="box.png"/>
+    <ROW Feature_="MainFeature" Component_="ArrowSign.png"/>
+    <ROW Feature_="MainFeature" Component_="BG.png_1"/>
+    <ROW Feature_="MainFeature" Component_="Bush1.png"/>
+    <ROW Feature_="MainFeature" Component_="png"/>
+    <ROW Feature_="MainFeature" Component_="caracter.png"/>
+    <ROW Feature_="MainFeature" Component_="Bone1.png"/>
+    <ROW Feature_="MainFeature" Component_="zombieFemale.png"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="BG.exe" SourcePath="BG.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="x64_Release"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="x64_Release"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="x64_Release"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="x64_Release"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="TheKnight.exe" Directory_="SHORTCUTDIR" Name="THEKNI~1.EXE|The Knight.exe" Component_="TheKnight.exe" Target="[#TheKnight.exe]" Description="The Knight.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="TheKnight.exe_1" Directory_="DesktopFolder" Name="THEKNI~1.EXE|The Knight.exe" Component_="TheKnight.exe" Target="[#TheKnight.exe]" Description="The Knight.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

@@ -77,10 +77,6 @@ void Box::repos()
 //update render
 void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vector<sf::Vector2f> zombiesPos , int**&map ,float deltaTime , bool playerDead , bool pLayerJumping)
 {
-	//std::cout << "ground : " << this->groundStatus << " , bottomBox :" << this->bottomBoxCollision << "\n";
-	//std::cout << "pushed  right : " << this->pushedRight << " , pushed left : " << this->pushedLeft << "\n";
-	//std::cout << "rightCol : " << this->rightBoxCollision << ", leftCol : " << this->leftBoxCollision << "\n";
-
 	//decceleration	
 	if ( (!this->pushedLeft && !this->pushedRight) || playerDead)
 	{
@@ -94,69 +90,6 @@ void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vec
 	}
 
 	//PLAYER COLISIONS
-
-	//left right player colision
-	//if(playerVelocity.x < 0)
-	//{
-	//	this->rightStatusPlayer = false;
-	//	this->pushedRight = false;
-	//	if ( playerPos.x <= this->position.x + 1 && playerPos.x >= this->position.x && ( (playerPos.y - 0.4 <= this->position.y + 1 && playerPos.y + 0.40 >= this->position.y) || (this->pushedLeft  ) )  )
-	//	{
-	//		this->pushedLeft = true;
-	//		if (!topColision)
-	//		{
-	//			if (this->leftStatus)
-	//			{
-	//				this->leftStatusPlayer = true;
-	//				this->velocity.x = 0;
-	//			}
-	//			else
-	//			{
-	//				this->velocity.x = playerVelocity.x;
-	//			}
-	//		}
-	//		else
-	//		{
-	//			this->velocity.x = 0;
-	//		}
-	//	}
-	//	else
-	//	{
-	//		this->pushedLeft = false;
-	//		this->leftStatusPlayer = false;
-	//	}
-	//}
-	//else if (playerVelocity.x > 0)
-	//{
-	//	this->leftStatusPlayer = false;
-	//	this->pushedLeft = false;
-	//	if (playerPos.x + 0.90 >= this->position.x && playerPos.x + 0.1 <= this->position.x + 1 && ((playerPos.y - 0.4 <= this->position.y + 1 && playerPos.y + 0.40 >= this->position.y) || (this->pushedRight)) )
-	//	{
-	//		this->pushedRight = true;
-	//		if (!topColision)
-	//		{
-	//			if (this->rightStatus)
-	//			{ 
-	//				this->rightStatusPlayer = true;
-	//				this->velocity.x = 0;
-	//			}
-	//			else
-	//			{
-	//				this->velocity.x = playerVelocity.x;
-	//			}
-	//		}
-	//		else
-	//		{
-	//			this->velocity.x = 0;
-	//		}
-	//	}
-	//	else
-	//	{
-	//		this->rightStatusPlayer = false;
-	//		this->pushedRight = false;
-	//	}
-	//}
-
 	//left right playerColsion v2
 
 	if (playerPos.x + 0.8 >= this->position.x && playerPos.x  <= this->position.x
@@ -274,7 +207,7 @@ void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vec
 	}
 
 
-	//left - right wall - it works
+	//left - right wall 
 		if (playerVelocity.x > 0)
 		{
 			if ((map[(int)(newPosition.y + 0.1)][(int)(newPosition.x + 0.99)] != 0 || map[(int)(newPosition.y + 0.90)][(int)(newPosition.x + 0.99)] != 0 || newPosition.x > 3840 / 60) && playerPos.y + 0.30 >= this->position.y && playerPos.y - 0.50 <= this->position.y + 0.99)
@@ -335,7 +268,7 @@ void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vec
 			this->velocity.x = 0;
 		}
 
-	//set position
+	//set newPosition
 	if ( (!rightStatus || !leftStatus) && (!this->topColision || !this->groundStatus ) )
 	{
 		this->position = newPosition;
@@ -391,9 +324,7 @@ void Box::update(sf::Vector2f playerPos, sf::Vector2f &playerVelocity , std::vec
 	}
 
 	//move
-	{
-		this->sprite->move(this->velocity);
-	}
+	this->sprite->move(this->velocity);
 }
 
 void Box::render(sf::RenderTarget *target)

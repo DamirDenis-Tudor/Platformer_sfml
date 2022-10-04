@@ -136,7 +136,6 @@ sf::Vector2f Zombie::getPosition()
 {
 	return this->position;
 }
-//function for interaction with player
 
 bool Zombie::getFreezeStatus()
 {
@@ -156,22 +155,6 @@ bool Zombie::getWaitingStatus()
 bool Zombie::getGroundStatus()
 {
 	return this->groundCollision;
-}
-
-
-void Zombie::setVelocityHorizontally(float velocity)
-{
-	this->velocity.x = velocity;
-}
-
-void Zombie::setDeadStatus(bool val)
-{
-	this->deadStatus = val;
-}
-
-void Zombie::setWaitingStatus(bool val)
-{
-	this->waiting = val;
 }
 
 sf::Vector2f Zombie::getVelocity()
@@ -197,6 +180,22 @@ bool Zombie::getDeadStatus()
 sf::Vector2f Zombie::getSpawnPosition()
 {
 	return this->spawnPosition;
+}
+
+//set
+void Zombie::setVelocityHorizontally(float velocity)
+{
+	this->velocity.x = velocity;
+}
+
+void Zombie::setDeadStatus(bool val)
+{
+	this->deadStatus = val;
+}
+
+void Zombie::setWaitingStatus(bool val)
+{
+	this->waiting = val;
 }
 
 //restart
@@ -248,7 +247,7 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 		this->sprite->move(this->velocity);
 	}
 
-	//follow
+	//follow player
 	if ( !this->leftBoxCollision && !this->rightBoxCollision && !this->leftCollision  && !this->rightCollision && !this->waiting) //change waiting
 	{
 		if (playerPosition.x - this->position.x > 0 && this->direction.x < 0 && (unsigned)playerPosition.y == (unsigned int)this->position.y)
@@ -268,16 +267,19 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 		this->animation(DEADZ, reverse, deltaTime);
 	}
 
+	//attack animation until finish
 	if (!this->attackFinish && !this->deadStatus)
 	{
 		this->animation(ATTACKZ, reverse, deltaTime);
 	}
 
+	//
 	if ((freeze && !this->deadStatus) || this->waiting || (this->blocked && !waiting))
 	{
 		this->animation(IDLEZ, reverse, deltaTime);
 	}
 
+	//player contact
 	if (abs(playerPosition.x - this->position.x) < 0.7f && groundStatus && (unsigned)playerPosition.y == (unsigned int)this->position.y && !this->falling)
 	{
 		this->velocity.x = 0;
@@ -341,8 +343,8 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 			}
 
 		}
-		//decceleration
-		//std::cout << "acceleration\n\n";
+
+		//deccleration
 		if (this->velocity.x < 0)
 		{
 			this->velocity.x += (20.f * deltaTime);
@@ -367,7 +369,6 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 			this->velocity.x = 0;
 		}
 
-		//
 		if (this->groundCollision && this->wasFalling)
 		{
 			direction.x = 1.f;
@@ -468,7 +469,7 @@ bool Zombie::update(int**& map , sf::Vector2f playerPosition , bool playerAtack 
 			}
 		}
 
-	 if ( !this->waiting  || this->falling )
+	 if ( !this->waiting  || this->falling ) // this condition is requaired beacause the movement  can be made by boxes
 		{
 			this->position = newPosition;
 			this->sprite->move(this->velocity);
